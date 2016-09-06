@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Tic Tac</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script> -->
+<script type="text/javascript" src="main.js"></script>
+
+</head>
+<body>
+<!-- https://pbs.twimg.com/profile_images/2350504254/image.jpg -->
+	<div id = "main-con">
+		<h2> Naughts and Crosses </h2>
+
+		
+			<div id="game-con">
+				
+				<div class="vertical-align">
+					<div id="info-con">
+						<h3> info </h3>
+						turns taken: <div id="turns-taken">0</div> <br>
+						<p>
+							<div id="player-stats">
+								<div id="player-1-stat">player 1: <div id="player-1-score">0</div></div> 
+								<div id="player-2-stat">player 2: <div id="player-2-score">0</div> </div> 
+							</div>
+						</p>
+						<button  id="reset-button" >reset</button><br>
+					</div>
+				</div>
+
+				<div id = "board-con">
+					<div class="vertical-align">
+						<div id = "grid">
+										<!--
+										<div id = "winLine"></div>
+										-->
+								
+						
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<div id ="difficulty-con"> 
+				difficulty: 
+				<div id="d-easy">easy</div> 
+				<div id="d-hard">hard</div>
+				<div id="d-impossible">impossibru</div>
+			</div>
+
+	</div>
+
+
+</body>
+
+</html>
+

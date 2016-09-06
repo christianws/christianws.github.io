@@ -1,0 +1,673 @@
+/* @import "base", "header"; */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Arbutus+Slab);
+#imported_from_base {
+  /*----------------------------------------------------------------------*/ }
+
+/* @extend %bg-image; */
+body, h1, h2 {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */ }
+
+/* @include rounded-corner(5px); */
+body {
+  /* background-color: #C02942; */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /*background: #fe9f4c  ; */
+  font-family: "Arbutus Slab", serif;
+  font-size: 16px;
+  /* background-color:$light-grey; */
+  background: url(../assets/pics/cork-wallet.jpg); }
+
+@media only screen and (max-width: 980px) {
+  body {
+    font-size: 14px; } }
+h1, h2 {
+  /*font-family: 'Pacifico', cursive; */
+  text-align: center;
+  color: #003366;
+  margin-top: 10px;
+  font-size: 180%; }
+
+h3, h4 {
+  /*font-family: 'Pacifico', cursive; */
+  font-size: 160%;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+  cursor: default;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+p {
+  font-size: 100%; }
+
+a {
+  color: #003366;
+  text-decoration: none; }
+
+/* FONTS */
+.bold-m {
+  font-size: 120%;
+  font-weight: bold; }
+
+.text-small {
+  font-size: 40%; }
+
+#centered-subtext {
+  text-align: center;
+  font-style: italic;
+  font-size: 120%; }
+
+.align-left {
+  text-align: left;
+  margin: 20px; }
+
+.align-right {
+  text-align: right;
+  margin: 20px; }
+
+.centered-s {
+  text-align: center;
+  font-size: 100%; }
+
+.centered-m {
+  text-align: center;
+  font-size: 140%; }
+
+.centered-l {
+  text-align: center;
+  font-size: 180%; }
+
+/* SPACERS */
+.margin-sides-xs {
+  margin-left: 2%;
+  margin-right: 2%; }
+
+.margin-sides-s {
+  margin-left: 4%;
+  margin-right: 4%; }
+
+.spacer-xxs {
+  margin-top: 10px; }
+
+.spacer-xs {
+  margin-top: 20px; }
+
+.spacer-s {
+  margin-top: 30px; }
+
+.spacer-m {
+  margin-top: 40px; }
+
+.spacer-l {
+  margin-top: 60px; }
+
+.spacer-xl {
+  margin-top: 80px; }
+
+.box-spacer_s {
+  position: relative;
+  height: 20px;
+  width: 100%; }
+
+.box-spacer_m {
+  position: relative;
+  height: 40px;
+  width: 100%; }
+
+.box-spacer_l {
+  position: relative;
+  height: 60px;
+  width: 100%; }
+
+.box-spacer_xl {
+  height: 80px;
+  width: 100%; }
+
+.inner_80 {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.inner_90 {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.vertical-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  /* IE 9 */
+  -webkit-transform: translateY(-50%);
+  /* Chrome, Safari, Opera */
+  width: 100%;
+  text-align: center;
+  padding: 0pc; }
+
+#imported-from-header {
+  /*----------------------------------------------------------------------*/ }
+
+#page-wrapper {
+  min-height: 100%;
+  position: relative; }
+
+#header-con {
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  color: grey;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Arbutus Slab", serif;
+  font-size: 16px;
+  display: table;
+  overflow: hidden;
+  vertical-align: middle;
+  /* box-shadow: 0px 0px, 0px 10px 50px rgba(0, 0, 0, 0.3); */
+  /*shadow on bottom   */ }
+
+#header-gap {
+  position: relative;
+  margin-top: 60px;
+  transition: 0.4s all cubic-bezier(0.02, 0.01, 0.47, 1); }
+
+#site-title {
+  position: relative;
+  float: left;
+  line-height: 60px;
+  font-size: 160%;
+  font-weight: normal;
+  color: grey; }
+
+#site-title a {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
+  font-weight: inherit; }
+
+/* ---------- Responsive Nav ---------- */
+/*-- refer to this -> http://www.hongkiat.com/blog/responsive-web-nav/ */
+#header-con ul {
+  position: relative;
+  list-style-type: none;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 270px;
+  border: green;
+  line-height: 60px;
+  font-weight: normal; }
+
+#header-con ul li {
+  /*floating the element will cause the ul to collapse */
+  display: inline;
+  float: left;
+  font-weight: inherit; }
+
+#header-con nav a {
+  color: #fff;
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: inherit;
+  text-shadow: 1px 1px 0px #283744;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+#header-con nav a:hover, nav a:active {
+  background-color: #8c99a4; }
+
+#header-con nav a#pull {
+  /* hide pull button on desktop */
+  display: none; }
+
+/* clearfix so we the parent container will hold all child elements */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+@media screen and (max-width: 860px) {
+  #site-title {
+    font-size: 115%; } }
+@media screen and (max-width: 600px) {
+  #site-title {
+    font-size: 115%; }
+
+  #header-con {
+    font-size: 100%; }
+
+  #header-con ul {
+    /* make it max width on browser resize */
+    position: relative;
+    font-size: 80%;
+    float: right;
+    height: auto;
+    width: auto;
+    right: 0; }
+
+  #header-con li {
+    position: relative;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    /* background-color:yellow; */ }
+
+  #header-con nav a {
+    position: relative;
+    width: 50px;
+    /*width: 100%; */
+    /* text-indent: 25px; */ } }
+/* hide the main menu and display the pull button */
+@media only screen and (max-width: 480px) {
+  #site-title {
+    font-size: 90%; }
+
+  #header-con {
+    width: 100%; }
+
+  #header-con ul {
+    clear: both;
+    display: none;
+    height: auto;
+    width: 100%; }
+
+  #header-con li {
+    display: block;
+    background-color: white;
+    width: 100%; }
+
+  #header-con nav a {
+    width: 100%; }
+
+  #header-con nav a#pull {
+    display: block;
+    float: right;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden; }
+
+  #header-con nav a#pull:before {
+    content: "";
+    background: url(https://www.newfangled.com/wp-content/uploads/2014/08/stuffcontentmgrfiles2ac67e44c30a21635f8a9d498f832bc1cmisc_resized80_313_257_hamenu.png) no-repeat;
+    background-size: 40px;
+    background-position: center;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    position: absolute;
+    right: 0; } }
+@media only screen and (max-width: 320px) {
+  #header-con li {
+    display: block;
+    float: none;
+    width: 100%; } }
+#imported_from_page {
+  /*----------------------------------------------------------------------*/ }
+
+/*----------------Content------------------- */
+/* good landing images 
+
+http://www.webdevtuts.net/wp-content/uploads/2015/09/Working-on-Website-Layout-from-Picjumbo900w.jpg
+
+http://hren.hr/wp-content/uploads/2015/11/mystore.hr_.jpg
+http://www.quertime.com/wp-content/uploads/2015/05/web-designer-web-developer-skills.jpg
+https://www.websitetigers.com/wp-content/uploads/2014/03/Web-Design-Las-Vegas-33a-1600x900.png
+http://vsirius.com/Content/uploads/a72edf4f921646a387436a0f52461991.jpg
+https://assets.entrepreneur.com/content/3x2/1300/20151120193840-code-coding-programming-css-macbook-laptop-computer-technology-working-business-web-design-developer-.jpeg
+*/
+#main-con {
+  position: relative;
+  width: 100%; }
+
+.screen-margin {
+  margin-left: 2%;
+  margin-right: 2%; }
+
+#landing-image_primary {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* background: url(http://www.vaahana.net/wp-content/uploads/2014/11/correct2-too-small.jpg); */
+  -webkit-box-shadow: inset 0px 0px 85px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 85px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 85px 0px rgba(0, 0, 0, 0.75);
+  /*css matic ->http://www.cssmatic.com/box-shadow */
+  background: url(../assets/pics/workstation.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*
+          width: 100%;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    */ }
+
+#landing-image_secondary {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* background: url(http://www.vaahana.net/wp-content/uploads/2014/11/correct2-too-small.jpg); */
+  /*@include inset-box-shadow(0.75);  */
+  /*css matic ->http://www.cssmatic.com/box-shadow */
+  background: url(../assets/pics/whoami.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*
+          width: 100%;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    */ }
+
+#landing-text {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 240%;
+  margin-top: 180px;
+  text-shadow: 2px 2px 4px black; }
+
+.dark-overlay {
+  position: relative;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /* background:rgba(255,255,255,0.5); */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1; }
+
+@media only screen and (max-width: 800px) {
+  #landing-image_primary {
+    height: 300px; }
+
+  #landing-image_secondary {
+    height: 300px; }
+
+  #landing-text {
+    margin-top: 110px; } }
+@media only screen and (max-width: 480px) {
+  #landing-image_primary {
+    height: 200px; }
+
+  #landing-image_secondary {
+    height: 200px; }
+
+  #landing-text {
+    margin-top: 60px;
+    font-size: 140%; } }
+/* GRID CONTAINERS */
+.grid-con {
+  position: relative;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  text-align: center; }
+
+.grid-2-coll-box {
+  position: relative;
+  width: 48%;
+  float: left;
+  height: 300px;
+  max-width: 800px;
+  background-color: white;
+  margin-bottom: 20px;
+  overflow: hidden;
+  /* @include box-shadow(0.75); */ }
+
+.grid-4-coll-box {
+  position: relative;
+  display: inline-block;
+  width: 22%;
+  min-width: 200px;
+  height: 300px;
+  max-width: 300px;
+  background-color: grey;
+  color: white;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  margin-top: 20px;
+  /*@include box-shadow(0.5); */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out; }
+
+.grid-4-coll-box:hover {
+  transform-origin: 50% 50%;
+  transform: scale(1.03, 1.03);
+  /* @include box-shadow(0.6); */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.grid-4-coll-box:hover .thumb-unit:after {
+  opacity: 0; }
+
+.grid-2-coll-box:hover .thumb-unit:after {
+  opacity: 0; }
+
+/*                HOME                */
+.contact-avenues {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: cover; }
+
+.view-project-btn {
+  position: relative;
+  border: #003366 solid;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+  font-size: 80%;
+  font-weight: bold;
+  overflow: hidden;
+  width: 120px;
+  text-align: center; }
+
+.view-project-btn:hover {
+  background-color: #003366;
+  color: white; }
+
+@media only screen and (max-width: 680px) {
+  .grid-2-coll-box {
+    display: block;
+    float: none;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; } }
+/* PORTFOLIO CONTAINERS */
+.thumb-unit {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white; }
+
+.thumb-unit:after {
+  content: '\A';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0.2;
+  transition: all 1s;
+  -webkit-transition: all 1s; }
+
+.fcc-algo_con {
+  position: relative;
+  border-radius: 20px;
+  width: 90%;
+  background-color: #E7EBF0;
+  height: 40px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  text-align: center; }
+
+.fcc-algo_name {
+  float: left;
+  width: 20%;
+  color: black;
+  background-color: #E7EBF0;
+  line-height: 40px; }
+
+.fcc-algo_description-con {
+  float: right;
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  display: table; }
+
+.fcc-algo_description-content {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+
+/* ABOUT CONTAINERS */
+#about-content {
+  position: relative;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 140%; }
+
+/* CONTACT CONTAINERS */
+#landing-image_map {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* background: url(http://www.vaahana.net/wp-content/uploads/2014/11/correct2-too-small.jpg); */
+  /*@include inset-box-shadow(0.75);  */
+  /*css matic ->http://www.cssmatic.com/box-shadow */
+  background: url(../assets/pics/london-world-map.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#contact-form {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow: hidden;
+  width: 50%;
+  font-size: 140%; }
+
+#contact-form input {
+  width: 460px;
+  display: block;
+  border: 1px solid #999;
+  height: 40px;
+  line-height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 100%; }
+
+#contact-form textarea {
+  width: 460px;
+  display: block;
+  border: 1px solid #999;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 80%; }
+
+#contact-form input[type="submit"] {
+  width: 140px;
+  display: block;
+  background-color: #4CAF50;
+  border: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s; }
+
+#contact-form input[type="submit"]:hover {
+  background-color: #449d48;
+  /* Green */
+  color: white;
+  /* giving it a glow */
+  text-shadow: -1px 1px 50px #ffc, 1px -1px 50px #fff; }
+
+/*
+#contact-form input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #636363;
+  text-align: center;
+}
+#contact-form input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #636363;
+  text-align:center;
+}
+*/
+footer {
+  position: absolute;
+  bottom: 0;
+  color: #f3f3f3;
+  font-size: 80%;
+  text-align: center;
+  background-color: #1F1209;
+  width: 100%;
+  height: 30px;
+  line-height: 30px; }
+
+footer {
+  width: 100%; }
+
+#in-main-scss {
+  /* this is in main.scss */ }
